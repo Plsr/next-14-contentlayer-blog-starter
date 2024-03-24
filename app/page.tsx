@@ -20,7 +20,7 @@ function PostCard(post: Post) {
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
       <div
-        className="prose prose-base hover:prose-a:text-accent-400 prose-img:rounded-md dark:prose-invert"
+        className="prose prose-base hover:prose-a:text-accent-400 prose-pre:bg-[#011627] prose-img:rounded-md dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
     </div>

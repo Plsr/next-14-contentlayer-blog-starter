@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./nightowl.css";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "next-themes";
 import siteConfig from "@/site.config";

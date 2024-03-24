@@ -46,34 +46,34 @@ We need to create functions to start, stop, and reset the timer. Our timer will 
 
 ```javascript
 function startTimer() {
-if (!running) {
-startTime = new Date().getTime();
-tInterval = setInterval(getShowTime, 1000);
-startButton.disabled = true;
-resetButton.disabled = false;
-running = 1;
-}
+  if (!running) {
+    startTime = new Date().getTime();
+    tInterval = setInterval(getShowTime, 1000);
+    startButton.disabled = true;
+    resetButton.disabled = false;
+    running = 1;
+  }
 }
 
 function getShowTime() {
-updatedTime = new Date().getTime();
-difference = updatedTime - startTime;
+  updatedTime = new Date().getTime();
+  difference = updatedTime - startTime;
 
-let minutes = Math.floor((difference % (1000 _ 60 _ 60)) / (1000 _ 60));
-let seconds = Math.floor((difference % (1000 _ 60)) / 1000);
+  let minutes = Math.floor((difference % (1000 _ 60 _ 60)) / (1000 _ 60));
+  let seconds = Math.floor((difference % (1000 _ 60)) / 1000);
 
-minutes = minutes < 10 ? "0" + minutes : minutes;
-seconds = seconds < 10 ? "0" + seconds : seconds;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-display.textContent = minutes + ':' + seconds;
+  display.textContent = minutes + ':' + seconds;
 }
 
 function resetTimer() {
-clearInterval(tInterval);
-startButton.disabled = false;
-resetButton.disabled = true;
-display.textContent = '00:00';
-running = 0;
+  clearInterval(tInterval);
+  startButton.disabled = false;
+  resetButton.disabled = true;
+  display.textContent = '00:00';
+  running = 0;
 }
 ```
 
