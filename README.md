@@ -34,3 +34,4 @@ Dark mode is supported out of the box. The starter uses the system preference by
 - [ ] Pages
 - [ ] RSS feed
 - [ ] Mobile
+- [ ] Pagination
