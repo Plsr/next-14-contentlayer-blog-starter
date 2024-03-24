@@ -25,6 +25,8 @@ Dark mode is supported out of the box. The starter uses the system preference by
 
 ## Todo
 
+### Now
+
 - [x] Post styling
   - [x] code blocks
 - [x] Post page
@@ -34,6 +36,9 @@ Dark mode is supported out of the box. The starter uses the system preference by
 - [ ] Mobile
 - [ ] Pagination
 - [ ] Footer
+
+### Later
+
 - [ ] Header
   - [x] Header needs to follow new styling conventions
   - [x] Better styling for buttons
