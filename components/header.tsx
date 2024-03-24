@@ -4,18 +4,24 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export const Header = () => {
   return (
-    <div className="flex justify-between my-4">
+    <div className="flex justify-between my-6">
       <h1>
-        <Link className="font-bold text-lg hover:text-blue-500" href="/">
+        <Link className="font-bold text-lg hover:text-accent-400" href="/">
           {siteConfig.title}
         </Link>
       </h1>
-      <div className="flex gap-8 items-center">
+      <div className="flex gap-4 items-center">
         <nav className="flex gap-4">
-          <Link className="hover:underline" href="/posts">
+          <Link
+            className="py-2 px-4 transition rounded-lg dark:hover:bg-base-900 hover:bg-base-200"
+            href="/posts"
+          >
             Posts
           </Link>
-          <Link className="hover:underline" href="/about">
+          <Link
+            className="py-2 px-4 transition rounded-lg dark:hover:bg-base-900 hover:bg-base-200"
+            href="/about"
+          >
             About
           </Link>
         </nav>

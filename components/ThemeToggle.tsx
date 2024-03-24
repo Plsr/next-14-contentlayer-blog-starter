@@ -17,10 +17,29 @@ export const ThemeToggle = () => {
     return <SunMoon className="w-5 h-5" />;
   }
 
-  if (resolvedTheme === "light") {
-    return <Moon className="w-5 h-5" onClick={() => setTheme("dark")} />;
+  const handleToggleClick = () => {
+    if (resolvedTheme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  return (
+    <div
+      className="p-2 transition rounded-lg dark:hover:bg-base-900 hover:bg-base-200"
+      onClick={handleToggleClick}
+    >
+      <ThemeToggleIcon themeType={resolvedTheme!} />
+    </div>
+  );
+};
+
+const ThemeToggleIcon = ({ themeType }: { themeType: string }) => {
+  if (themeType === "light") {
+    return <Moon className="w-5 h-5" />;
   }
-  if (resolvedTheme === "dark") {
-    return <Sun className="w-5 h-5" onClick={() => setTheme("light")} />;
+  if (themeType === "dark") {
+    return <Sun className="w-5 h-5" />;
   }
 };
