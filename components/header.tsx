@@ -1,5 +1,6 @@
 import siteConfig from "@/site.config";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Header = () => {
   return (
@@ -9,14 +10,17 @@ export const Header = () => {
           {siteConfig.title}
         </Link>
       </h1>
-      <nav className="flex gap-4">
-        <Link className="hover:underline" href="/posts">
-          Posts
-        </Link>
-        <Link className="hover:underline" href="/about">
-          About
-        </Link>
-      </nav>
+      <div className="flex gap-8 items-center">
+        <nav className="flex gap-4">
+          <Link className="hover:underline" href="/posts">
+            Posts
+          </Link>
+          <Link className="hover:underline" href="/about">
+            About
+          </Link>
+        </nav>
+        <ThemeToggle />
+      </div>
     </div>
   );
 };
