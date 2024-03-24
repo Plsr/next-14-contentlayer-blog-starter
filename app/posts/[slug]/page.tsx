@@ -1,5 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
+import { Prose } from "@/components/Prose";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -22,10 +23,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         </time>
         <h1 className="text-3xl font-bold">{post.title}</h1>
       </div>
-      <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
+      <Prose>
+        <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+      </Prose>
     </article>
   );
 };

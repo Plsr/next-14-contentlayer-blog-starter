@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
+import { Prose } from "@/components/Prose";
 
 function PostCard(post: Post) {
   return (
@@ -19,10 +20,9 @@ function PostCard(post: Post) {
       >
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
-      <div
-        className="prose prose-base hover:prose-a:text-accent-400 prose-pre:bg-[#011627] prose-img:rounded-md dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
+      <Prose>
+        <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+      </Prose>
     </div>
   );
 }

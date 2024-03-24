@@ -27,16 +27,16 @@ Dark mode is supported out of the box. The starter uses the system preference by
 
 - [x] Post styling
   - [x] code blocks
-- [ ] Header
-  - [x] Header needs to follow new styling conventions
-  - [x] Better styling for buttons
-  - [ ] Link active state
-- [ ] Home page
-  - [ ] make configurable wether to display full posts or list of posts on home page
-- [ ] Post page
+- [x] Post page
 - [ ] Metadata for posts
 - [ ] Pages
 - [ ] RSS feed
 - [ ] Mobile
 - [ ] Pagination
 - [ ] Footer
+- [ ] Header
+  - [x] Header needs to follow new styling conventions
+  - [x] Better styling for buttons
+  - [ ] Link active state
+- [ ] Home page
+  - [ ] make configurable wether to display full posts or list of posts on home page
