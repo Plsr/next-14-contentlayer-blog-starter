@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-base-50 dark:bg-base-950`}>
         <div className="mx-auto max-w-screen-md">
           <ThemeProvider attribute="class" enableSystem>
             <Header />

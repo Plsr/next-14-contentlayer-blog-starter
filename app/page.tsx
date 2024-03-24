@@ -4,20 +4,23 @@ import { allPosts, Post } from "contentlayer/generated";
 
 function PostCard(post: Post) {
   return (
-    <div className="mb-8">
-      <h2 className="mb-1 text-xl">
+    <div className="mb-32">
+      <h2 className="mb-1">
         <Link
           href={post.url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+          className="font-bold text-3xl no-underline hover:text-accent-400 transition"
         >
           {post.title}
         </Link>
       </h2>
-      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
+      <time
+        dateTime={post.date}
+        className="mb-8 block text-sm text-base-400 dark:text-base-600"
+      >
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
       <div
-        className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0"
+        className="prose prose-base hover:prose-a:text-accent-400 prose-img:rounded-md dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
     </div>
@@ -30,7 +33,7 @@ export default function Home() {
   );
 
   return (
-    <div className="max-w-xl py-8">
+    <div className="mx-auto max-w-xl py-8">
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
