@@ -23,11 +23,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
 
   const description = post.metaDescription || post.body.raw.slice(0, 200);
 
-  // Font
-  const interBold = fetch(
-    new URL("public/Inter-Bold.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer());
-
   const interRegular = fetch(
     new URL("public/Inter-Regular.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -78,7 +73,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
         />
         <div
           style={{
-            fontSize: 50,
+            fontSize: 40,
             color: "#444",
           }}
         >
@@ -97,12 +92,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
           data: await interRegular,
           style: "normal",
           weight: 400,
-        },
-        {
-          name: "Inter",
-          data: await interBold,
-          style: "normal",
-          weight: 700,
         },
       ],
     }
