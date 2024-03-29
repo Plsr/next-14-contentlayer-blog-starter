@@ -30,8 +30,10 @@ Dark mode is supported out of the box. The starter uses the system preference by
 - [x] Post styling
   - [x] code blocks
 - [x] Post page
-- [ ] Metadata for posts
+- [x] Metadata for posts
+  - [x] including OG
 - [ ] Pages
+  - [ ] Metadata
 - [ ] RSS feed
 - [ ] Mobile
 - [ ] Pagination

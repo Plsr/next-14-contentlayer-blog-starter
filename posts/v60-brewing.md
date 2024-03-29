@@ -1,6 +1,7 @@
 ---
 title: Mastering the Art of Coffee Brewing with the V60 Pour Over
 date: 2024-03-24
+metaDescription: Learn about the Art of brewing coffee with the legendary V60 pour over
 ---
 
 Coffee enthusiasts know that the method of brewing can significantly influence the flavor and quality of their morning cup. Among the myriad of brewing techniques, the [V60 pour over](https://www.hario-europe.com/collections/v60-dripper) stands out for its ability to extract the nuanced flavors of coffee, offering a clean and vibrant cup. Here's your guide to mastering this revered brewing method.
