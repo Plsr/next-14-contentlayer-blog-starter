@@ -2,18 +2,19 @@ import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import { Prose } from "@/components/Prose";
 import { Metadata } from "next";
+import siteConfig from "@/site.config";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
   const description = post.metaDescription || post.body.raw.slice(0, 200);
 
   return {
-    title: post.title,
+    title: `${post.title} | ${siteConfig.title}`,
     description,
     openGraph: {
       title: post.title,
@@ -24,7 +25,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
   return (
