@@ -5,6 +5,7 @@ import "./nightowl.css";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "next-themes";
 import siteConfig from "@/site.config";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,9 +36,7 @@ export default function RootLayout({
             </ThemeProvider>
           </div>
         </div>
-        <div className="text-sm text-base-400 dark:text-base-500 bg-base-100 dark:bg-base-900 text-center p-4">
-          © {new Date().getFullYear()} {siteConfig.title}
-        </div>
+        <Footer />
       </body>
     </html>
   );
