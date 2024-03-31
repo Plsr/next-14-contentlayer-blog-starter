@@ -34,7 +34,7 @@ Dark mode is supported out of the box. The starter uses the system preference by
   - [x] including OG
 - [x] Pages
   - [x] Metadata
-- [ ] RSS feed
+- [x] RSS feed
 - [ ] Mobile
 - [ ] Pagination
 - [ ] Footer
