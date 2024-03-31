@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { compareDesc, format, parseISO } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
+import { format, parseISO } from "date-fns";
+import { Post } from "contentlayer/generated";
 import { Prose } from "@/components/Prose";
+import { allSortedPosts } from "@/util/posts";
+import siteConfig from "@/site.config";
+import { PostsPagination } from "@/components/PostsPagination";
 
-function PostCard(post: Post) {
+export function PostCard(post: Post) {
   return (
     <div className="mb-32">
       <h2 className="mb-1">
@@ -28,15 +31,14 @@ function PostCard(post: Post) {
 }
 
 export default function Home() {
-  const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
+  const posts = allSortedPosts.slice(0, siteConfig.postsPerPage);
 
   return (
     <div className="mx-auto max-w-xl py-8">
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
+      <PostsPagination currentPage={1} />
     </div>
   );
 }
