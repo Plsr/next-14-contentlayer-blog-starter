@@ -9,7 +9,7 @@ function PostCard(post: Post) {
       <h2 className="mb-1">
         <Link
           href={`/posts/${post.slug}`}
-          className="font-bold text-3xl no-underline hover:text-accent-400 transition"
+          className="font-bold text-2xl md:text-3xl no-underline hover:text-accent-400 transition"
         >
           {post.title}
         </Link>

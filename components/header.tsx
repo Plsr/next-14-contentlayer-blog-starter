@@ -7,7 +7,7 @@ export const Header = () => {
   const navPages = allPages.filter((page) => page.showInHeader);
 
   return (
-    <div className="flex justify-between my-6">
+    <div className="flex items-center justify-between my-6">
       <h1>
         <Link className="font-bold text-lg hover:text-accent-400" href="/">
           {siteConfig.title}
