@@ -22,7 +22,7 @@ export async function GET(request: Request) {
     feed.addItem({
       title: post.title,
       description: post.metaDescription || post.body.raw.slice(0, 200),
-      link: post.url,
+      link: `${siteConfig.url}/posts/${post.slug}`,
       date: new Date(post.date),
     });
   });

@@ -19,7 +19,7 @@ export const Header = () => {
             <Link
               key={page._id}
               className="py-2 px-4 transition rounded-lg dark:hover:bg-base-900 hover:bg-base-200"
-              href={page.url}
+              href={`/pages/${page.slug}`}
             >
               {page.title}
             </Link>

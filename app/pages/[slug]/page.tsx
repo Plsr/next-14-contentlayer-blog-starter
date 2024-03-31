@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import siteConfig from "@/site.config";
 
 export const generateStaticParams = async () =>
-  allPages.map((page) => ({ slug: page._raw.flattenedPath }));
+  allPages.map((page) => ({ slug: page.slug }));
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const page = allPages.find((page) => page.slug === params.slug);

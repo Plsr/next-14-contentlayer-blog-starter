@@ -18,7 +18,7 @@ export const Post = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
-      resolve: (page) => page._raw.sourceFileName.replace(/\.md$/, ""),
+      resolve: (post) => post._raw.flattenedPath.replace("posts/", ""),
     },
   },
 }));
@@ -39,7 +39,7 @@ export const Page = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
-      resolve: (page) => page._raw.sourceFileName.replace(/\.md$/, ""),
+      resolve: (page) => page._raw.flattenedPath.replace("pages/", ""),
     },
   },
 }));
