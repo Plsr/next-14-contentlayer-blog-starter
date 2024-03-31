@@ -1,4 +1,4 @@
-import { PostCard } from "@/app/page";
+import { PostCard } from "@/components/PostCard";
 import { PostsPagination } from "@/components/PostsPagination";
 import siteConfig from "@/site.config";
 import { allSortedPosts } from "@/util/posts";
