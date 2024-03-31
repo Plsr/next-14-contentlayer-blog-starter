@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "A Next.js 14 Blog Starter using Contentlayer and TailwindCSS, built by @chrisjarling",
   alternates: {
     types: {
-      "application/rss+xml": "/posts/feed.rss",
+      "application/rss+xml": "/posts/rss",
     },
   },
 };
