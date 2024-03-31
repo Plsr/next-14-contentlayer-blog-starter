@@ -26,12 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-base-50 dark:bg-base-950 p-4`}>
-        <div className="mx-auto max-w-screen-md">
-          <ThemeProvider attribute="class" enableSystem>
-            <Header />
-            {children}
-          </ThemeProvider>
+      <body className={`${inter.className} bg-base-50 dark:bg-base-950`}>
+        <div className="p-4">
+          <div className="mx-auto max-w-screen-md">
+            <ThemeProvider attribute="class" enableSystem>
+              <Header />
+              {children}
+            </ThemeProvider>
+          </div>
+        </div>
+        <div className="text-sm text-base-400 dark:text-base-500 bg-base-100 dark:bg-base-900 text-center p-4">
+          © {new Date().getFullYear()} {siteConfig.title}
         </div>
       </body>
     </html>
